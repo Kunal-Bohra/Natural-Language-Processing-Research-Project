@@ -1,4 +1,4 @@
-__author__ = 'Owner'
+__author__ = 'Kunal'
 '''
 This script generates a text file (in tab separated format) with columns containing wired.com article's text,
   article link and article id.
