@@ -71,7 +71,7 @@ def generate_intermediate_crawl_map():
 
 '''
 Input: None
-Output: Final text tab delimited file in the format of article_id, url, text format
+Output: Final text tab delimited file in the format of article_id, url, text, length of text format
 '''
 
 
@@ -93,8 +93,9 @@ def generate_crawl_file():
         value = final_crawl_map[key]
         url = value[0]
         text = value[1]
+        length = len(text.split(' '))
         # Write to the file
-        crawl_file.write(id + "\t" + url + "\t" + text + "\n")
+        crawl_file.write(id + "\t" + "\t" + str(length) + "\t" + url + "\t" + text + "\n")
 
     # Close the file handlers
     initial_data_file.close()
